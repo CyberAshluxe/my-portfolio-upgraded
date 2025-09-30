@@ -1,0 +1,177 @@
+/* src/components/Projects.css */
+
+.projects-section {
+  padding: 80px 20px;
+  background-color: #0a0a14; /* Dark navy background */
+  color: #e0e0e0;
+}
+
+.projects-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.projects-main-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  background: linear-gradient(90deg, #00ffff, #007bff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.projects-subtitle {
+  font-size: 1.1rem;
+  color: #a0a0b0;
+  margin-bottom: 60px;
+}
+
+/* --- Responsive Grid Layout --- */
+.projects-grid {
+  display: grid;
+  gap: 2rem;
+  /* Desktop: 3 columns */
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* Tablet: 2 columns */
+@media (max-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile: 1 column */
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+  .projects-main-title {
+    font-size: 2.2rem;
+  }
+}
+
+/* --- Project Card Styling --- */
+.project-card {
+  background-color: #12121f;
+  border-radius: 12px;
+  border: 1px solid #2a2a4a;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(0, 123, 255, 0.3);
+}
+
+.project-image-container {
+  position: relative;
+}
+
+.project-image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+}
+
+.project-status-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background-color: #9333ea; /* Purple */
+  color: white;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.project-content {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Allows content to fill the card */
+  text-align: left;
+}
+
+.project-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 12px 0;
+}
+
+.project-description {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #a0a0b0;
+  flex-grow: 1; /* Pushes buttons to the bottom */
+  margin-bottom: 20px;
+}
+
+/* --- Tech Stack Badges --- */
+.project-tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.tech-badge {
+  background-color: #2a2a4a;
+  color: #00ffff;
+  padding: 5px 12px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+/* --- Action Buttons --- */
+.project-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: auto; /* Pushes buttons to the bottom if content is short */
+}
+
+.btn {
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background-color: transparent;
+  border-color: #2a2a4a;
+  color: #e0e0e0;
+}
+
+.btn-outline:hover {
+  background-color: #2a2a4a;
+  color: white;
+  border-color: #007bff;
+}

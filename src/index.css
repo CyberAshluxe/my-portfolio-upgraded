@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+
+@keyframes pop-in {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  80% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+/* src/components/Skills.css */
+
+/* --- Main Section Styling --- */

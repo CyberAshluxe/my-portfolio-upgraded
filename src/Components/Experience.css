@@ -1,0 +1,191 @@
+/* src/components/Experience.css */
+
+.experience-section {
+  background-color: #111118;
+  padding: 80px 20px;
+  color: #EAEAEA;
+  font-family: 'Inter', sans-serif;
+}
+
+.experience-container {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.experience-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  background: linear-gradient(90deg, #8A2BE2, #4169E1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.experience-subtitle {
+  font-size: 1.1rem;
+  color: #A0A0A0;
+  margin-bottom: 60px;
+}
+
+/* --- Timeline Styling --- */
+.timeline-wrapper {
+  position: relative;
+}
+
+/* The vertical line */
+.timeline-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: 20px; /* Aligns with the center of the icon */
+  width: 3px;
+  background: linear-gradient(to bottom, #8A2BE2, #4169E1);
+  border-radius: 2px;
+}
+
+.timeline {
+  position: relative;
+}
+
+.timeline-item {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 40px;
+  position: relative;
+}
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-icon-container {
+  flex-shrink: 0;
+}
+
+.timeline-icon {
+  width: 44px;
+  height: 44px;
+  background-color: #1A1A23;
+  border: 2px solid #3a3a5a;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  z-index: 2; /* Sits on top of the line */
+  position: relative; /* Needed for z-index */
+}
+
+.timeline-content {
+  background-color: #1A1A23;
+  border: 1px solid #2A2A33;
+  border-radius: 12px;
+  padding: 24px;
+  text-align: left;
+  flex-grow: 1;
+}
+
+.timeline-tag {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  text-transform: capitalize;
+}
+
+.timeline-tag.experience {
+  background-color: rgba(65, 105, 225, 0.2);
+  color: #4169E1;
+  border: 1px solid #4169E1;
+}
+
+.timeline-tag.education {
+  background-color: rgba(0, 191, 255, 0.2);
+  color: #00BFFF;
+  border: 1px solid #00BFFF;
+}
+
+.item-title {
+  font-size: 1.5rem;
+  margin: 0 0 8px 0;
+  color: #FFFFFF;
+}
+
+.item-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px; /* row-gap column-gap */
+  font-size: 0.9rem;
+  color: #A0A0A0;
+  margin-bottom: 16px;
+}
+
+.item-description {
+  color: #C0C0C0;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.item-details {
+  margin-top: 16px;
+}
+.item-details h4 {
+  font-size: 1rem;
+  color: #FFFFFF;
+  margin-bottom: 12px;
+}
+
+.item-details ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.item-details ul li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 8px;
+  color: #C0C0C0;
+}
+.item-details ul li::before {
+  content: '■';
+  position: absolute;
+  left: 0;
+  color: #4169E1;
+  font-size: 0.8rem;
+}
+
+.experience-skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.experience-skill-badge {
+  background-color: #2A2A33;
+  color: #C0C0C0;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+  .experience-title {
+    font-size: 2.2rem;
+  }
+  .timeline-wrapper::before {
+    left: 14px; /* Adjust line position for smaller screens */
+  }
+  .timeline-item {
+    gap: 1rem;
+  }
+  .timeline-icon {
+    width: 32px;
+    height: 32px;
+    font-size: 1rem;
+  }
+}

@@ -33,12 +33,12 @@ const projectsData = [
     title: "Triora E-commerce",
     description:
       "A multi-vendor e-commerce site for gaming, skincare, and eBooks. Features a complex backend and dynamic UI.",
-    techStack: ["React", "Next.js", "TailwindCSS", "Firebase"],
-    liveDemoUrl: "#",
-    githubUrl: "#",
+    techStack: ["React", "Node.js", "TailwindCSS", "Firebase"],
+    liveDemoUrl: "https://triora-six.vercel.app/",
+    githubUrl: "https://github.com/CyberAshluxe/triora",
     imageUrl:
       "https://placehold.co/600x400/0a2540/FFFFFF/png?text=Triora+E-commerce", // Replace with your actual image URL
-    status: "In Progress",
+    
   },
   {
     title: "Printivio Clone",

@@ -2,6 +2,8 @@ import React from "react";
 import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
 import myimage from "../assets/my image.jpg";
 import bg from "../assets/bg.jpg";
+import BlurText from "./BlurText";
+import TextType from "./TextType";
 
 const HeroSection = () => {
   // ... (the customAnimationStyle string from before can remain here if needed)
@@ -35,15 +37,27 @@ const HeroSection = () => {
         />
 
         {/* Name */}
-        <h1 className="text-4xl md:text-6xl font-bold mb-2">
-          Abdulrofiu Ashrof
-        </h1>
+        <BlurText
+          text="Abdulrofiu Ashrof"
+          className="text-4xl md:text-6xl font-bold mb-2 justify-center"
+          animateBy="letters"
+          direction="top"
+        />
         {/* Titles */}
-        <p className="text-md md:text-xl text-gray-300 mb-4 tracking-wider">
-          Web Developer <span className="text-cyan-400 mx-1">•</span> IT
-          Security Student <span className="text-cyan-400 mx-1">•</span>{" "}
-          Blockchain Enthusiast
-        </p>
+        <TextType
+          text={[
+            "Web Developer | Forex Trader | IT Security Student",
+            
+          ]}
+          className="text-md md:text-xl text-gray-300 mb-4 tracking-wider"
+          typingSpeed={100}
+          deletingSpeed={50}
+          pauseDuration={2000}
+          loop={true}
+          showCursor={true}
+          cursorCharacter="|"
+          cursorClassName="text-cyan-400"
+        />
         {/* Tagline */}
         <p className="max-w-2xl mx-auto text-gray-400 mb-8">
           Building secure, modern, and scalable web solutions with a passion for
@@ -98,4 +112,3 @@ export default HeroSection;
 
 // Add pop-in keyframes to global styles if not already present
 // You can add this to your App.css or index.css:
-

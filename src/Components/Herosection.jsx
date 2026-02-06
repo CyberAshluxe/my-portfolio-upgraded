@@ -1,6 +1,6 @@
 import React from "react";
 import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
-import myimage from "../assets/my image.jpg";
+import myimage from "../assets/my image.png";
 import bg from "../assets/bg.jpg";
 import BlurText from "./BlurText";
 import TextType from "./TextType";

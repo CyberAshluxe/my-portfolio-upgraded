@@ -11,10 +11,126 @@ import "./Projects.css";
 // For images, you can use a service like Cloudinary or just place them in your public folder.
 const projectsData = [
   {
+    title: "Pride American Electronics",
+    description:
+      "A Shopify electronics storefront featuring computer accessories, smart-home devices, mobile essentials, and audio products.",
+    techStack: ["Shopify", "Electronics", "Ecommerce"],
+    liveDemoUrl: "https://prideamericanelectronics.store/",
+    liveDemoLabel: "Visit Store",
+    imageUrl:
+      "https://prideamericanelectronics.store/cdn/shop/files/ChatGPT_Image_Jul_25_2026_05_45_18_AM_1400x.png?v=1784954756",
+  },
+  {
+    title: "Alexandra Bleu",
+    description:
+      "A family fashion Shopify store with clothing and accessories for women, men, and children.",
+    techStack: ["Shopify", "Fashion", "Ecommerce"],
+    liveDemoUrl: "https://alexandraluxes.myshopify.com/",
+    liveDemoLabel: "Visit Store",
+    imageUrl:
+      "https://alexandraluxes.myshopify.com/cdn/shop/files/ChatGPT_Image_Aug_12_2026_08_20_55_AM_1400x.png?v=1786548088",
+  },
+  {
+    title: "Crown & Pearl",
+    description:
+      "A seasonal Shopify storefront featuring themed campaigns, fashion products, and pet costume collections.",
+    techStack: ["Shopify", "Fashion", "Seasonal Ecommerce"],
+    liveDemoUrl: "https://crownandpearll.myshopify.com/",
+    liveDemoLabel: "Visit Store",
+    imageUrl:
+      "https://crownandpearll.myshopify.com/cdn/shop/files/image.png?v=1793097564&width=3840",
+  },
+  {
+    title: "Shanks Collection",
+    description:
+      "A fashion and accessories Shopify store with collections for men, women, and children.",
+    techStack: ["Shopify", "Fashion", "Ecommerce"],
+    liveDemoUrl: "https://shankscollection.myshopify.com/",
+    liveDemoLabel: "Visit Store",
+    imageUrl:
+      "https://shankscollection.myshopify.com/cdn/shop/files/Emerald_Elegance_in_Modern_Architecture_1400x.png?v=1791173964",
+  },
+  {
+    title: "DeoMark Growth",
+    description:
+      "A data-driven ecommerce marketing agency helping dropshipping stores, Etsy sellers, and handmade brands grow through SEO, paid campaigns, email marketing, and conversion optimization.",
+    techStack: ["Ecommerce Growth", "SEO", "Conversion Optimization"],
+    count: "1+",
+    liveDemoUrl: "https://www.deomarkgrowth.com/",
+    liveDemoLabel: "Visit Website",
+    imageUrl:
+      "https://placehold.co/600x400/0a2540/FFFFFF/png?text=DeoMark+Growth",
+  },
+  {
+    title: "Luxify",
+    description:
+      "A premium Shopify growth agency focused on building high-converting ecommerce stores with custom development, theme customization, app integrations, and conversion optimization.",
+    techStack: ["Shopify", "Ecommerce", "Conversion Optimization"],
+    count: "1+",
+    liveDemoUrl: "https://www.luxify.pro/#home",
+    liveDemoLabel: "Visit Website",
+    imageUrl: "https://placehold.co/600x400/0a2540/FFFFFF/png?text=Luxify",
+  },
+  {
+    title: "Buchaufstieg",
+    description:
+      "An international book marketing agency that helps authors grow their readership through cinematic campaigns, multilingual promotion, Amazon discoverability, and Goodreads outreach.",
+    techStack: ["Book Marketing", "Multilingual Campaigns", "Author Branding"],
+    count: "1+",
+    liveDemoUrl: "https://www.buchaufstieg.com/",
+    liveDemoLabel: "Visit Website",
+    imageUrl:
+      "https://placehold.co/600x400/0a2540/FFFFFF/png?text=Buchaufstieg",
+  },
+  {
+    title: "Author Elevate",
+    description:
+      "An ethical book marketing service helping authors improve discoverability, reach relevant readers, and build sustainable relationships through Amazon optimization, Goodreads growth, and author branding.",
+    techStack: ["Book Marketing", "Amazon Optimization", "Author Branding"],
+    count: "1+",
+    liveDemoUrl: "https://www.authorelevatebooks.com/",
+    liveDemoLabel: "Visit Website",
+    imageUrl:
+      "https://placehold.co/600x400/0a2540/FFFFFF/png?text=Author+Elevate",
+  },
+  {
+    title: "BookRise",
+    description:
+      "A book marketing platform that builds author visibility and reader momentum with Amazon optimization, Goodreads growth, book launch campaigns, video marketing, and reader outreach.",
+    techStack: ["Book Marketing", "Goodreads Growth", "Book Promotion"],
+    count: "1+",
+    liveDemoUrl: "https://bookrise.vercel.app/",
+    liveDemoLabel: "Visit Website",
+    imageUrl: "https://placehold.co/600x400/0a2540/FFFFFF/png?text=BookRise",
+  },
+  {
+    title: "Holley O'Connell",
+    description:
+      "A literary marketing portfolio showcasing book reviews, Goodreads promotion, Amazon optimization, reader outreach, book launches, and author branding.",
+    techStack: ["Book Reviews", "Goodreads Promotion", "Amazon Optimization"],
+    count: "1+",
+    liveDemoUrl: "https://holley-0connell.vercel.app/",
+    liveDemoLabel: "Visit Website",
+    imageUrl:
+      "https://placehold.co/600x400/0a2540/FFFFFF/png?text=Holley+O%27Connell",
+  },
+  {
+    title: "Hellen Kinley",
+    description:
+      "A boutique book marketing portfolio focused on ethical, data-informed promotion, helping authors improve discovery through Amazon and Goodreads expertise and reader outreach.",
+    techStack: ["Book Marketing", "Amazon & Goodreads", "Reader Outreach"],
+    count: "1+",
+    liveDemoUrl: "https://hellenkinley.vercel.app/",
+    liveDemoLabel: "Visit Website",
+    imageUrl:
+      "https://placehold.co/600x400/0a2540/FFFFFF/png?text=Hellen+Kinley",
+  },
+  {
     title: "RedStore E-commerce",
     description:
       "A full-stack sportswear e-commerce platform with features like product filtering, cart, and user authentication.",
     techStack: ["React", "Node.js", "Express", "MongoDB"],
+    count: "4+",
     liveDemoUrl: "https://redstore-dun.vercel.app",
     githubUrl: "https://github.com/CyberAshluxe/redstore",
     imageUrl:
@@ -25,6 +141,7 @@ const projectsData = [
     description:
       "A sleek, modern UI for a banking application, focusing on a clean user experience and responsive design.",
     techStack: ["React", "Styled-Components", "Framer Motion"],
+    count: "3+",
     liveDemoUrl: "https://novabank-ashy.vercel.app",
     githubUrl: "https://github.com/CyberAshluxe/novabank",
     imageUrl: "https://placehold.co/600x400/0a2540/FFFFFF/png?text=Nova+Bank", // Replace with your actual image URL
@@ -34,6 +151,7 @@ const projectsData = [
     description:
       "A multi-vendor e-commerce site for gaming, skincare, and eBooks. Features a complex backend and dynamic UI.",
     techStack: ["React", "Node.js", "TailwindCSS", "Firebase"],
+    count: "4+",
     liveDemoUrl: "https://triora-six.vercel.app/",
     githubUrl: "https://github.com/CyberAshluxe/triora",
     imageUrl:
@@ -45,6 +163,7 @@ const projectsData = [
     description:
       "A feature-rich clone of an online printing platform, allowing users to customize and order various print products.",
     techStack: ["HTML", "CSS", "JavaScript"],
+    count: "3+",
     liveDemoUrl: "https://printivo-khaki.vercel.app",
     githubUrl: "https://github.com/CyberAshluxe/printivo",
     imageUrl:
@@ -55,6 +174,7 @@ const projectsData = [
     description:
       "A frontend web application for discovering and exploring a diverse collection of books, with a focus on UI/UX.",
     techStack: ["HTML", "CSS", "BOOTSTRAP"],
+    count: "3+",
     liveDemoUrl: "https://level-one-project-two.vercel.app",
     githubUrl: "https://github.com/CyberAshluxe/level-one-project",
     imageUrl: "https://placehold.co/600x400/0a2540/FFFFFF/png?text=Bookdiverse", // Replace with your actual image URL
@@ -64,6 +184,7 @@ const projectsData = [
     description:
       "A practical utility web app that helps users track product expiry dates to reduce waste.",
     techStack: ["JavaScript", "HTML", "CSS", "PWA"],
+    count: "4+",
     liveDemoUrl: "https://expired-products-detector.vercel.app",
     githubUrl: "https://github.com/CyberAshluxe/expired-products-detector",
     imageUrl:
@@ -74,6 +195,7 @@ const projectsData = [
     description:
       "A simple and intuitive landing page for a food recipe app that helps users discover and share their favorite recipes.",
     techStack: ["Bootstrap", "React", "CSS"],
+    count: "3+",
     liveDemoUrl: "https://foodie-landing-page-two.vercel.app",
     githubUrl: "https://github.com/CyberAshluxe/Foodie-Landing-Page",
     imageUrl:
@@ -84,6 +206,7 @@ const projectsData = [
     description:
       "A simple and intuitive to-do reminder app that helps users manage their tasks effectively.",
     techStack: ["JavaScript", "HTML", "BOOTSTRAP"],
+    count: "3+",
     liveDemoUrl: "https://to-do-reminder-ochre.vercel.app/",
     githubUrl: "https://github.com/CyberAshluxe/To-Do-Reminder-App",
     imageUrl:
@@ -98,6 +221,7 @@ const projectsData = [
     githubUrl: "https://github.com/CyberAshluxe/luxevision",
     imageUrl:
       "https://placehold.co/600x400/0a2540/FFFFFF/png?text=Luxevision", // Replace with your actual image URL
+    count: "5+",
       status: "In Progress",
   }
 ];
@@ -164,16 +288,18 @@ const ProjectCard = ({ project }) => {
             rel="noopener noreferrer"
             className="btn btn-primary"
           >
-            Live Demo
+            {project.liveDemoLabel || `View All ${project.count.split('+')[0]}`} →
           </a>
-          <a
-            href={project.githubUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn btn-outline"
-          >
-            <FaGithub /> GitHub
-          </a>
+          {project.githubUrl && (
+            <a
+              href={project.githubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-outline"
+            >
+              <FaGithub /> GitHub
+            </a>
+          )}
         </div>
       </div>
     </motion.div>

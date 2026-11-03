@@ -1,6 +1,6 @@
 import React from "react";
 import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
-import myimage from "../assets/my image.png";
+import myimage from "../assets/my image logo.webp";
 import bg from "../assets/bg.jpg";
 import BlurText from "./BlurText";
 import TextType from "./TextType";
@@ -46,7 +46,7 @@ const HeroSection = () => {
         {/* Titles */}
         <TextType
           text={[
-            "Web Developer | Forex Trader | IT Security Student",
+            "Shopify Developer | Founder of Luxify | IT Security Student",
             
           ]}
           className="text-md md:text-xl text-gray-300 mb-4 tracking-wider"

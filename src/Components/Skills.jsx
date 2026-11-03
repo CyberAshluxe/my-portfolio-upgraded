@@ -4,9 +4,6 @@ import React from 'react';
 import { Fade } from 'react-awesome-reveal';
 import './Skills.css';
 
-// --- Data for the component ---
-// The "Blockchain" object has been replaced with "Forex Trading".
-
 const skillCategories = [
   {
     title: 'Frontend Development',
@@ -17,11 +14,6 @@ const skillCategories = [
     title: 'Backend Development',
     color: '#68A063', // A Node.js-green color
     skills: ['Node.js', 'Express.js', 'MongoDB', 'REST APIs', 'Database Design', 'Authentication'],
-  },
-  {
-    title: 'Forex Trading', // <-- UPDATED SECTION
-    color: '#FFD700', // A gold/yellow color for finance
-    skills: ['Technical Analysis', 'Fundamental Analysis', 'Risk Management', 'MT4/MT5', 'Candlestick Patterns', 'Market Psychology'],
   },
   {
     title: 'Cybersecurity',

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Code, Shield, TrendingUp } from 'lucide-react'; // Changed Box to TrendingUp for Forex
+import { Code, Shield, ShoppingBag } from 'lucide-react';
 import useInViewAnimation from '../Hooks/useInViewAnimation';
 
 const AboutMe = () => {
@@ -35,21 +35,31 @@ const AboutMe = () => {
                 ${textInView ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}
             >
               <p>
-                I'm <span className="font-semibold text-cyan-400">Abdulrofiu Ashrof</span>, a dedicated web developer and cybersecurity
+                I'm <span className="font-semibold text-cyan-400">Abdulrofiu Ashrof</span>, owner of{' '}
+                <a
+                  href="https://www.luxify.pro/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-semibold text-cyan-400 hover:underline"
+                >
+                  Luxify
+                </a>
+                , a Shopify development agency. I'm also a dedicated web developer and cybersecurity
                 student with a passion for creating secure, scalable, and user-friendly
                 applications. Currently pursuing my B.Tech in Cybersecurity at
                 LAUTECH, I combine my academic knowledge with practical
                 development experience.
               </p>
               <p>
-                My journey in technology spans across full-stack web development,
-                cybersecurity fundamentals, and forex trading. I believe in
-                writing clean, maintainable code while keeping security at the
-                forefront of every project.
+                My experience spans full-stack web development, cybersecurity
+                fundamentals, and ecommerce development. I've developed over 20
+                Shopify stores, building responsive shopping experiences tailored
+                to each brand. I believe in writing clean, maintainable code
+                while keeping security at the forefront of every project.
               </p>
               <p>
-                When I'm not coding, you'll find me exploring the latest in financial markets,
-                contributing to open-source projects, or learning about
+                When I'm not coding, you'll find me exploring the latest in
+                ecommerce and Shopify, contributing to open-source projects, or learning about
                 emerging cybersecurity threats and solutions.
               </p>
             </div>
@@ -101,14 +111,14 @@ const AboutMe = () => {
                 </p>
               </div>
 
-              {/* Card 3: Forex Trader (Changed from Blockchain Enthusiast) */}
+              {/* Card 3: Ecommerce Developer */}
               <div className="bg-gray-800 p-6 rounded-lg shadow-lg border border-gray-700 hover:border-cyan-500 transition-all duration-300">
                 <div className="flex items-center mb-3">
-                  <TrendingUp className="text-cyan-400 mr-4" size={28} /> {/* Changed icon to TrendingUp */}
-                  <h3 className="text-2xl font-semibold text-gray-100">Forex Trader</h3> {/* Changed title */}
+                  <ShoppingBag className="text-cyan-400 mr-4" size={28} />
+                  <h3 className="text-2xl font-semibold text-gray-100">Ecommerce Developer</h3>
                 </div>
                 <p className="text-gray-400">
-                  Passionate about analyzing financial markets and executing strategic trades
+                  Developed 20+ Shopify stores, creating responsive storefronts and tailored ecommerce experiences for brands.
                 </p>
               </div>
             </div>

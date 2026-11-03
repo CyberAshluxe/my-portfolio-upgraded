@@ -1,6 +1,6 @@
 import React from "react";
 import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
-import myimage from "../assets/my image logo.webp";
+import myimage from "../assets/ashluxe logo.png";
 import bg from "../assets/bg.jpg";
 import BlurText from "./BlurText";
 import TextType from "./TextType";
@@ -29,7 +29,7 @@ const HeroSection = () => {
         <img
           src={myimage}
           alt="Abdulrofiu Ashrof"
-          className="w-40 h-40 md:w-48 md:h-48 mx-auto mb-4 rounded-full border-2 border-cyan-400 shadow-[0_0_25px_rgba(56,189,248,0.7)] object-cover animate-pop-in"
+          className="w-48 h-48 md:w-56 md:h-56 mx-auto mb-4 rounded-full border-2 border-cyan-400 shadow-[0_0_25px_rgba(56,189,248,0.7)] object-cover animate-pop-in"
           style={{
             animation: "pop-in 0.7s cubic-bezier(0.22, 1, 0.36, 1)",
             animationFillMode: "forwards",

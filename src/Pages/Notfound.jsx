@@ -18,6 +18,8 @@ const Notfound = () => {
       {/* Subtext */}
       <motion.p
         initial={{ y: 50, opacity: 0 }}
+
+        
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.4, duration: 0.8 }}
         className="mt-4 text-2xl md:text-3xl font-light tracking-wide"

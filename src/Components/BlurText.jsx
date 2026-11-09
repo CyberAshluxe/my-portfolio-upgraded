@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { useEffect, useRef, useState, useMemo } from "react";
+import { createElement, useEffect, useRef, useState, useMemo } from "react";
 
 const buildKeyframes = (from, steps) => {
   const keys = new Set([
@@ -16,6 +16,7 @@ const buildKeyframes = (from, steps) => {
 
 const BlurText = ({
   text = "",
+  as: Component = "p",
   delay = 100,
   className = "",
   animateBy = "words",
@@ -77,35 +78,35 @@ const BlurText = ({
     stepCount === 1 ? 0 : i / (stepCount - 1)
   );
 
-  return (
-    <p ref={ref} className={`blur-text ${className} flex flex-wrap`}>
-      {elements.map((segment, index) => {
-        const animateKeyframes = buildKeyframes(fromSnapshot, toSnapshots);
+  return createElement(
+    Component,
+    { ref, className: `blur-text ${className} flex flex-wrap` },
+    elements.map((segment, index) => {
+      const animateKeyframes = buildKeyframes(fromSnapshot, toSnapshots);
 
-        const spanTransition = {
-          duration: totalDuration,
-          times,
-          delay: (index * delay) / 1000,
-        };
-        spanTransition.ease = easing;
+      const spanTransition = {
+        duration: totalDuration,
+        times,
+        delay: (index * delay) / 1000,
+      };
+      spanTransition.ease = easing;
 
-        return (
-          <motion.span
-            className="inline-block will-change-[transform,filter,opacity]"
-            key={index}
-            initial={fromSnapshot}
-            animate={inView ? animateKeyframes : fromSnapshot}
-            transition={spanTransition}
-            onAnimationComplete={
-              index === elements.length - 1 ? onAnimationComplete : undefined
-            }
-          >
-            {segment === " " ? "\u00A0" : segment}
-            {animateBy === "words" && index < elements.length - 1 && "\u00A0"}
-          </motion.span>
-        );
-      })}
-    </p>
+      return (
+        <motion.span
+          className="inline-block will-change-[transform,filter,opacity]"
+          key={index}
+          initial={fromSnapshot}
+          animate={inView ? animateKeyframes : fromSnapshot}
+          transition={spanTransition}
+          onAnimationComplete={
+            index === elements.length - 1 ? onAnimationComplete : undefined
+          }
+        >
+          {segment === " " ? "\u00A0" : segment}
+          {animateBy === "words" && index < elements.length - 1 && "\u00A0"}
+        </motion.span>
+      );
+    })
   );
 };
 

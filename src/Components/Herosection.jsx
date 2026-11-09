@@ -36,8 +36,13 @@ const HeroSection = () => {
           }}
         />
 
+        <p className="text-sm font-semibold uppercase tracking-[0.3em] text-cyan-400 mb-2">
+          LuxeBuilds
+        </p>
+
         {/* Name */}
         <BlurText
+          as="h1"
           text="Abdulrofiu Ashrof"
           className="text-4xl md:text-6xl font-bold mb-2 justify-center"
           animateBy="letters"
@@ -46,7 +51,7 @@ const HeroSection = () => {
         {/* Titles */}
         <TextType
           text={[
-            "Shopify Developer | Founder of Luxify | IT Security Student",
+            "Web Developer & Shopify Developer | Founder of Luxify | IT Security Student",
             
           ]}
           className="text-md md:text-xl text-gray-300 mb-4 tracking-wider"

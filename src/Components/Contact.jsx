@@ -23,49 +23,25 @@ const Contact = () => {
     subject: "",
     message: "",
   });
-  const [status, setStatus] = useState({ type: "", message: "" });
-
-  // ✅ Handle input changes
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.id]: e.target.value });
   };
 
-  // ✅ Handle form submit
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    setStatus({ type: "loading", message: "Sending message..." });
+    const body = [
+      `Name: ${formData.name}`,
+      `Email: ${formData.email}`,
+      `Subject: ${formData.subject}`,
+      "",
+      "Message:",
+      formData.message,
+    ].join("\n");
+    const mailtoUrl = `mailto:info@luxebuilds.dev?subject=${encodeURIComponent(
+      formData.subject
+    )}&body=${encodeURIComponent(body)}`;
 
-    try {
-      const res = await fetch(
-        "https://portfolio-backend-0wnc.onrender.com/send-email",
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(formData),
-        }
-      );
-
-      const result = await res.json();
-
-      if (result.success) {
-        setStatus({
-          type: "success",
-          message: "✅ Message sent successfully!",
-        });
-        setFormData({ name: "", email: "", subject: "", message: "" });
-      } else {
-        setStatus({
-          type: "error",
-          message: "❌ Failed to send message. Try again.",
-        });
-      }
-    } catch (error) {
-      console.error("❌ Error:", error);
-      setStatus({
-        type: "error",
-        message: "🚨 Network error. Try again later.",
-      });
-    }
+    window.location.href = mailtoUrl;
   };
 
   return (
@@ -228,27 +204,10 @@ const Contact = () => {
             <button
               type="submit"
               className="send-btn"
-              disabled={status.type === "loading"}
             >
-              <FiSend />{" "}
-              {status.type === "loading" ? "Sending..." : "Send Message"}
+              <FiSend /> Send to Mail
             </button>
           </form>
-
-          {/* ✅ Status Message */}
-          {status.message && (
-            <p
-              className={`status-msg ${
-                status.type === "success"
-                  ? "success"
-                  : status.type === "error"
-                  ? "error"
-                  : ""
-              }`}
-            >
-              {status.message}
-            </p>
-          )}
         </div>
       </div>
     </section>

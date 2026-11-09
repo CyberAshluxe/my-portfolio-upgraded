@@ -1,5 +1,13 @@
 import React from "react";
-import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
+import {
+  FaEnvelope,
+  FaFacebookF,
+  FaGithub,
+  FaInstagram,
+  FaLinkedin,
+  FaTiktok,
+  FaXTwitter,
+} from "react-icons/fa6";
 import myimage from "../assets/ashluxe logo.png";
 import bg from "../assets/bg.jpg";
 import BlurText from "./BlurText";
@@ -12,7 +20,7 @@ const HeroSection = () => {
     // The id="home" is the only new addition here
     <section
       id="home"
-      className="relative flex items-center justify-center min-h-screen bg-gray-900 text-white overflow-hidden"
+      className="relative flex items-start justify-center min-h-screen pt-24 pb-10 md:items-center md:py-0 bg-gray-900 text-white overflow-hidden"
     >
       {/* Background Image & Overlay */}
       <div
@@ -29,7 +37,7 @@ const HeroSection = () => {
         <img
           src={myimage}
           alt="Abdulrofiu Ashrof"
-          className="w-48 h-48 md:w-56 md:h-56 mx-auto mb-4 rounded-full border-2 border-cyan-400 shadow-[0_0_25px_rgba(56,189,248,0.7)] object-cover animate-pop-in"
+          className="w-56 h-56 md:w-56 md:h-56 mx-auto mb-4 rounded-full border-2 border-cyan-400 shadow-[0_0_25px_rgba(56,189,248,0.7)] object-cover animate-pop-in"
           style={{
             animation: "pop-in 0.7s cubic-bezier(0.22, 1, 0.36, 1)",
             animationFillMode: "forwards",
@@ -84,25 +92,64 @@ const HeroSection = () => {
           </a>
         </div>
         {/* Social Icons */}
-        <div className="flex justify-center gap-6">
+        <div className="flex max-w-md flex-wrap justify-center gap-x-6 gap-y-4 mx-auto">
+          <a
+            href="https://www.instagram.com/luxebuilds.dev"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LuxeBuilds on Instagram"
+            className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 transform hover:scale-110"
+          >
+            <FaInstagram size={28} />
+          </a>
+          <a
+            href="https://x.com/Luxebuilds"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LuxeBuilds on X"
+            className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 transform hover:scale-110"
+          >
+            <FaXTwitter size={28} />
+          </a>
+          <a
+            href="https://www.facebook.com/profile.php?id=61593147720089&mibextid=ZbWKwL"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LuxeBuilds on Facebook"
+            className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 transform hover:scale-110"
+          >
+            <FaFacebookF size={28} />
+          </a>
           <a
             href="https://www.linkedin.com/in/abdulrofiu-ashrof-6a9b81358/"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Abdulrofiu Ashrof on LinkedIn"
             className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 transform hover:scale-110"
           >
             <FaLinkedin size={28} />
           </a>
           <a
+            href="https://www.tiktok.com/@luxebuilds.dev"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LuxeBuilds on TikTok"
+            className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 transform hover:scale-110"
+          >
+            <FaTiktok size={28} />
+          </a>
+          <a
             href="https://github.com/CyberAshluxe/"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="LuxeBuilds on GitHub"
             className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 transform hover:scale-110"
           >
             <FaGithub size={28} />
           </a>
           <a
-            href="mailto:ashrofabdulrofiu21@gmail.com"
+            href="mailto:info@luxebuilds.dev"
+            aria-label="Email Abdulrofiu Ashrof"
             className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 transform hover:scale-110"
           >
             <FaEnvelope size={28} />

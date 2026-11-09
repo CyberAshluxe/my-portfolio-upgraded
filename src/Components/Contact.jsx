@@ -3,11 +3,17 @@ import {
   FiMail,
   FiPhone,
   FiMapPin,
-  FiDownload,
   FiSend,
-  FiGithub,
-  FiLinkedin,
 } from "react-icons/fi";
+import {
+  FaFacebookF,
+  FaGithub,
+  FaInstagram,
+  FaLinkedin,
+  FaTiktok,
+  FaWhatsapp,
+  FaXTwitter,
+} from "react-icons/fa6";
 import "./Contact.css";
 
 const Contact = () => {
@@ -76,14 +82,32 @@ const Contact = () => {
               <FiMail className="icon" />
               <div>
                 <span>Email</span>
-                <p>ashrofabdulrofiu21@gmail.com</p>
+                <a className="contact-link" href="mailto:info@luxebuilds.dev">
+                  info@luxebuilds.dev
+                </a>
               </div>
             </div>
             <div className="info-item">
               <FiPhone className="icon" />
               <div>
                 <span>Phone</span>
-                <p>+234 (0) 814 668 9063</p>
+                <a className="contact-link" href="tel:+13363385599">
+                  +1 (336) 338-5599
+                </a>
+              </div>
+            </div>
+            <div className="info-item">
+              <FaWhatsapp className="icon" aria-hidden="true" />
+              <div>
+                <span>WhatsApp</span>
+                <a
+                  className="contact-link"
+                  href="https://wa.me/13363385599"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Message me on WhatsApp
+                </a>
               </div>
             </div>
             <div className="info-item">
@@ -93,23 +117,62 @@ const Contact = () => {
                 <p>Ogbomoso, Nigeria</p>
               </div>
             </div>
-            {/* <div className="social-icons d-flex"> */}
             <div className="follow-me">
               <h4>Follow Me</h4>
               <div className="social-icons">
                 <a
-                  href="https://github.com"
+                  href="https://www.instagram.com/luxebuilds.dev"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="LuxeBuilds on Instagram"
                 >
-                  <FiGithub />
+                  <FaInstagram />
+                  <span>Instagram</span>
                 </a>
                 <a
-                  href="https://linkedin.com"
+                  href="https://x.com/Luxebuilds"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="LuxeBuilds on X"
                 >
-                  <FiLinkedin />
+                  <FaXTwitter />
+                  <span>X</span>
+                </a>
+                <a
+                  href="https://www.facebook.com/profile.php?id=61593147720089&amp;mibextid=ZbWKwL"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LuxeBuilds on Facebook"
+                >
+                  <FaFacebookF />
+                  <span>Facebook</span>
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/abdulrofiu-ashrof-6a9b81358/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Abdulrofiu Ashrof on LinkedIn"
+                >
+                  <FaLinkedin />
+                  <span>LinkedIn</span>
+                </a>
+                <a
+                  href="https://www.tiktok.com/@luxebuilds.dev"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LuxeBuilds on TikTok"
+                >
+                  <FaTiktok />
+                  <span>TikTok</span>
+                </a>
+                <a
+                  href="https://github.com/CyberAshluxe/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LuxeBuilds on GitHub"
+                >
+                  <FaGithub />
+                  <span>GitHub</span>
                 </a>
               </div>
             </div>

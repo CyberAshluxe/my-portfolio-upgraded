@@ -7,35 +7,25 @@ import './Skills.css';
 const skillCategories = [
   {
     title: 'Frontend Development',
-    color: '#61DAFB', // A React-blue color
-    skills: ['HTML5', 'CSS3', 'JavaScript', 'React', 'Tailwind CSS', 'Bootstrap', 'Responsive Design'],
+    color: '#61DAFB',
+    skills: ['HTML', 'CSS', 'JavaScript', 'React', 'Tailwind CSS', 'Responsive Design'],
   },
   {
     title: 'Backend Development',
-    color: '#68A063', // A Node.js-green color
-    skills: ['Node.js', 'Express.js', 'MongoDB', 'REST APIs', 'Database Design', 'Authentication'],
+    color: '#68A063',
+    skills: ['Node.js', 'Express.js', 'MongoDB', 'REST APIs'],
   },
   {
-    title: 'Cybersecurity',
-    color: '#FF4136', // A cautionary red
-    skills: ['Security Fundamentals', 'Threat Analysis', 'Secure Coding', 'Penetration Testing', 'Risk Assessment', 'OWASP'],
+    title: 'Shopify Development',
+    color: '#95BF47',
+    skills: ['Shopify Store Setup', 'Theme Customization', 'Liquid', 'App Integrations', 'Ecommerce'],
   },
   {
     title: 'Tools & Technologies',
-    color: '#007ACC', // A VS Code-blue color
-    skills: ['Git', 'Github', 'VS Code', 'Postman', 'Linux', 'Docker', 'AWS Basics'],
+    color: '#007ACC',
+    skills: ['Git', 'GitHub', 'VS Code', 'Postman'],
   },
 ];
-
-const coreCompetencies = [
-  { name: 'JavaScript', proficiency: 90 },
-  { name: 'React', proficiency: 85 },
-  { name: 'Node.js', proficiency: 80 },
-  { name: 'Cybersecurity', proficiency: 75 },
-];
-
-
-// --- The Main Component (No other changes needed here) ---
 
 const Skills = () => {
   return (
@@ -45,7 +35,7 @@ const Skills = () => {
         <Fade direction="down" triggerOnce>
           <h2 className="skills-title d-block">Skills & Expertise</h2>
           <p className="skills-subtitle">
-            A comprehensive toolkit for building modern, secure, and scalable applications
+            Web development and Shopify skills for building modern websites and ecommerce stores.
           </p>
         </Fade>
 
@@ -70,30 +60,6 @@ const Skills = () => {
           ))}
         </div>
 
-        {/* Core Competencies Section */}
-        <div className="core-competencies">
-          <Fade direction="down" triggerOnce>
-            <h2 className="competencies-title">Core Competencies</h2>
-          </Fade>
-          <div className="competencies-grid">
-            {coreCompetencies.map((competency) => (
-              <Fade direction="up" key={competency.name} triggerOnce>
-                <div className="competency-item">
-                  <div className="competency-header">
-                    <p>{competency.name}</p>
-                    <p>{competency.proficiency}% Proficiency</p>
-                  </div>
-                  <div className="progress-bar-container">
-                    <div
-                      className="progress-bar-filler"
-                      style={{ width: `${competency.proficiency}%` }}
-                    ></div>
-                  </div>
-                </div>
-              </Fade>
-            ))}
-          </div>
-        </div>
       </div>
     </section>
   );

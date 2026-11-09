@@ -51,16 +51,6 @@ const Footer = () => {
           </nav>
         </div>
 
-        {/* Download CV Button */}
-        <div className="text-center">
-          <a
-            href="/cv.pdf"
-            download
-            className="inline-block bg-cyan-500 hover:bg-cyan-600 text-white font-semibold py-3 px-8 rounded-md transition-all duration-300 transform hover:scale-105 shadow-lg"
-          >
-            Download CV
-          </a>
-        </div>
       </div>
 
       <div className="text-center text-gray-500 text-sm mt-6">

@@ -41,6 +41,9 @@ const Contact = () => {
       formData.subject
     )}&body=${encodeURIComponent(body)}`;
 
+    window.gtag("event", "conversion", {
+      send_to: "AW-18564161583/enxiCJ_5sbUdEK_AipRF",
+    });
     window.location.href = mailtoUrl;
   };
 
